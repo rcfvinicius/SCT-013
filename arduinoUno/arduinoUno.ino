@@ -57,8 +57,8 @@ void loop(){
     delay(500);
 
 
-    
-//NORMAL 1494+
+    /* ATUALIZAR VALORES! */
+//NORMAL 1494+ 
 //EMERGENCIA 683 a 746
 //CORTA DE TRAMA 606 a 671
 //QUEBRA NO URDUME 155 a 442
@@ -74,7 +74,7 @@ void loop(){
         Serial.println(potencia);
         }
         digitalWrite(2,LOW);
-     delay(1000);
+     delay(1000);//                       conferir o tempo de retomada
     }
 
 
