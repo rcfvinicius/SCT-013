@@ -1,5 +1,3 @@
-
-
 #include <ESP8266WiFi.h>        /* bilblioteca adequada para wifi esp8266 */
 #include <ESP8266HTTPClient.h>  /* biblioteca para acesso à API */
 #define REDEWIFI "MotoG5"
@@ -19,6 +17,7 @@ void setup(){
     delay(500);
     //Serial.println(REDEWIFI);
   }
+  Serial.println(".");
   Serial.print("CONECTADO à rede WIFI ");
   Serial.println(REDEWIFI);
   pinMode(4,INPUT);//D2
@@ -80,7 +79,7 @@ if(((int)digitalRead(4) + (int)digitalRead(5) + (int)digitalRead(12) + (int)digi
     digitalWrite(14, LOW);
     delay(800);
 
-          Serial.print(digitalRead(4));//D2
+    Serial.print(digitalRead(4));//D2
      Serial.print(digitalRead(5));//D1
      Serial.print(digitalRead(12));//D6
      Serial.println(digitalRead(13));//D7

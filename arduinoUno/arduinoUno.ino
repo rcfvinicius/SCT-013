@@ -1,3 +1,17 @@
+//o lado do CT importa. Usar com a impressao apontando no mesmo sentido do fluxo (somente monofásico)
+//CT sólido(anel) é mais preciso
+//a documentaçao diz que o capacitor correto é de 10uF
+
+
+/* 
+1 x CT sensor YHDC SCT-013-000
+1 x Burden resistor 18 Ohms if supply voltage is 3.3V, or 33 Ohms if supply voltage is 5V
+2 x 10k Ohm resistors (or any equal value resistor pair up to 470k Ohm)
+1 x 10uF capacitor
+ */
+
+
+
 //LCD
 //SDA na A4 
 //SCL na A5
@@ -37,7 +51,7 @@ void loop(){
  
      Serial.println("6.0606");
     
-    double Irms = SCT013.calcIrms(1480);   // Calcula o valor da Corrente
+    double Irms = SCT013.calcIrms(1480);   // Calcula o valor da Corrente. testar 5588 (lembrar de mudar nos de baixo)
     potencia = Irms * tensao;          // Calcula o valor da Potencia Instantanea    
 
     Serial.print("Corrente = ");
