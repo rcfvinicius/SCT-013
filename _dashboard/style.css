@@ -1,0 +1,302 @@
+:root{
+    --cor1:#145da0;/* #145da0 */
+    --cor2:#FEDE00;/* #FEDE00 */
+    --cor3:#e6ddc4;/* #e6ddc4 */
+}
+body{
+    margin:0;
+    padding:0;
+
+    background-color: var(--cor1);
+    color: var(--cor2);
+    width:calc(100vw - 10px);
+    height: calc(100vh - 10px);
+    overflow: hidden;
+    border: var(--cor2) 5px solid;
+
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+/* load */
+#load{
+    position: absolute;
+    background-color: rgba(71, 71, 71, 0.678);
+    width:100vw;
+    height:100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+#load > div{
+    border-top:3px solid var(--cor2);
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    animation: animacaoload .5s infinite linear;
+}
+
+@keyframes animacaoload{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+
+section{
+    background-color: var(--cor3);
+    height: 600px;
+    min-height: 600px;
+    color:black;
+    font-family: sans-serif;
+    border: black solid 4px;
+}
+
+select{
+    border:none;
+    padding: 5px;
+    /* opacity: 0.5; */
+    text-align: center;
+}
+
+#section2{
+    width: 60%;
+    min-width: 90px;
+}
+button,select,[type="radio"]{
+    cursor:pointer;
+}
+
+#section1 button{
+    margin-left: 50%;
+    transform: translatex(-50%);
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    font-weight: 600;
+}
+
+/* parte superior */
+#section1{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+}
+#partes-supEinf{
+    margin-top: 40px;
+}
+#selects-parte-superior{
+    display: flex;
+    justify-content: center;
+    column-gap:40px;
+
+}
+
+#section1 h2{
+    text-align:center;
+}
+
+#checkbox-selecionar-tudo{
+    margin-left: 50%;
+    transform: translatex(-50%);
+    margin-top: 10px;
+}
+
+[for="selecionar-tudo"]{
+    font-weight: 550;
+}
+
+
+/* linha */
+#linha{
+    background-color: black;
+    width: 300px;
+    height: 3px;
+    margin-top:40px;
+    margin-bottom:40px;
+    margin-left: 50%;
+    transform: translatex(-50%);
+    border-radius: 50px;
+}
+
+/* parte inferior */
+#selects-parte-inferior{
+    display: flex;
+    column-gap: 20px;
+    justify-content:center;
+    margin-bottom: 20px;
+}
+#periodos{
+    display: block;
+    font-weight: 700;
+    margin-left:50px;
+}
+.radio-periodos{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    border: black 1px solid;
+    position: relative;
+    top:2px;
+}
+.radio-periodos:checked{
+    background-color: #0175fe
+}
+
+/* maquina */
+#select-maquina{
+    margin-left: 50%;
+    transform:translateX(-50%);
+    margin-top: 20px;
+    width: 240px;
+}
+
+
+
+
+
+
+/* LADO DIREITO (section 2) */
+#section2{
+    display: flex;
+    position: relative;
+}
+#pelicula{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.527);
+}
+
+#container-area-lateral{
+    display: flex;
+    position:absolute;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+#area-lateral{
+    width: 0;
+    height: 100%;
+    background-color: var(--cor3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* informaçoes do grafico */
+#info-grafico{
+    width: 100%;
+    height:300px;
+}
+#info-grafico h2{
+    text-align: center;
+}
+#info-grafico h3{
+    margin: 10px 10px;
+}
+
+#info-grafico h3:nth-child(2){color:rgb(214, 10, 10);}
+#info-grafico h3:nth-child(3){color:rgb(14, 184, 226);}
+#info-grafico h3:nth-child(4){color:rgb(81, 6, 221);}
+
+#info-grafico h3:nth-child(5){
+    border-bottom:2px solid black;
+}
+/* grafico */
+#area-lateral svg{
+    width: 209px;
+    position:relative;
+    height: 209px;
+    transform: rotate(-90deg);
+    transition: .5s;
+  }
+#area-lateral circle{
+    width: 150px;
+    height: 150px;
+    fill:none;
+    stroke: black;
+    stroke-width: 60;
+    transform: translate(5px,5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    transition: .5s;
+  }
+#area-lateral circle:first-child{
+    stroke-dashoffset: 0;
+    stroke: rgba(110, 109, 109, 0.493);
+  }
+
+  /* botao abrir area lateral */
+#abrir-fechar-button{
+    appearance: none;
+    width: 20px;
+    height: 100%;
+    border-radius:0;
+    font-size: 20px;
+    padding:0;
+    background-color: var(--cor3);
+    border:none;
+    border-right: 3px solid black;
+    border-left: 1px solid black;
+   
+}
+#abrir-fechar-button:hover{
+    background-color: #b8b09c;
+}
+
+#container-conteudo-section2{
+    margin-left: 30px;
+    width: 100%;
+    padding-top:10px;
+    display: flex;
+    flex-direction: column;
+    margin-right:10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+#botoes-de-filtro{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 20px;
+    flex-direction:row-reverse;
+    height: 40px;
+    border-bottom: 2px solid black;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+#botoes-de-filtro button{
+    appearance: none;
+    background:none;
+    border:none;
+    height: 70%;
+    margin-right: 3px;
+    font-weight: 600;
+}
+#botoes-de-filtro button:hover{
+    outline:2px solid black
+}
+
+#conteudo{
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+#conteudo p{
+    margin:0;
+    padding:5px;
+    margin-right:5px;
+    font-weight: 600;
+}
+#conteudo p:not(:nth-child(2n)){
+    background-color: #cec5ae;
+}
+
+/* https://fonts.google.com/ */

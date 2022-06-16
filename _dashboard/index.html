@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./ico.png" type="image/png">
+    <link href="./style.css" rel="stylesheet">
+
+    <script src="./script.js" defer></script>
+
+    <title>ETICAL - DASHBOARD</title>
+</head>
+<body>
+    <div id="load"><div></div></div>
+
+    <section id="section1">
+    <div id="partes-supEinf">
+    <div id="parte-superior">
+        <h2>Seleção geral</h2>
+        <div id="selects-parte-superior">
+        <select class="mes" name="mes" size="1">
+            <option value="01">Janeiro</option>
+            <option value="02">Fevereiro</option>
+            <option value="03">Março</option>
+            <option value="04">Abril</option>
+            <option value="05">Maio</option>
+            <option value="06">Junho</option>
+            <option value="07">Julho</option>
+            <option value="08">Agosto</option>
+            <option value="09">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+        </select>
+        <select class="ano" name="ano">
+            <option value="22">2022</option>
+            <option value="21">2021</option>
+        </select>
+        </div>
+
+        <div id="checkbox-selecionar-tudo">
+        <input id="selecionar-tudo" type="checkbox" name="select-all" value="true">
+        <label for="selecionar-tudo">Selecionar tudo</label>
+        </div>
+        <button id="botao-superior">BUSCAR</button>
+    </div>
+
+    <div id="linha"></div>
+
+    <div id="parte-inferior">
+        <h2>Seleção específica</h2>
+        <div id="selects-parte-inferior">
+        <select class="dia" name="dia">
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+        </select>
+        <select class="mes" name="mes" size="1">
+            <option value="01">Janeiro</option>
+            <option value="02">Fevereiro</option>
+            <option value="03">Março</option>
+            <option value="04">Abril</option>
+            <option value="05">Maio</option>
+            <option value="06">Junho</option>
+            <option value="07">Julho</option>
+            <option value="08">Agosto</option>
+            <option value="09">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+        </select>
+        <select class="ano" name="ano">
+            <option value="22">2022</option>
+            <option value="21">2021</option>
+        </select>
+        </div>
+
+        <div id="periodos">
+            Periodo: 
+            <input id="a" class="radio-periodos" type="radio" name="periodo" value="a" checked><label for="a">A</label>
+            <input id="b" class="radio-periodos" type="radio" name="periodo" value="b"><label for="b">B</label>
+            <input id="c" class="radio-periodos" type="radio" name="periodo" value="c"><label for="c">C</label>
+        </div>
+
+        <select id="select-maquina" name="maquina" size="1">
+            <option value="maquina1">Máquina 1</option>
+            <option value="maquina2">Máquina 2</option>
+            <option value="maquina3">Máquina 3</option>
+        </select>
+        <br>
+        <button id="botao-inferior">BUSCAR</button>
+    </div>
+</div>
+    </section>
+
+
+
+
+
+    <section id="section2">
+    <div id="pelicula"></div>
+    <div id="container-area-lateral">  
+        <div id="area-lateral">
+            <div id="info-grafico">
+                <h2>Máquina:</h2>
+                <h3>Emergência:</h3>
+                <h3>Corte:</h3>
+                <h3>Quebra:</h3>
+                <h3>TOTAL:</h3>
+                <h3>Eficiência:</h3>
+            </div>
+            <svg><circle cx="99" cy="99" r="70"></circle></svg>
+        </div>
+        
+        <button id="abrir-fechar-button">></button>
+    </div>
+
+        <div id="container-conteudo-section2">
+            <div id="botoes-de-filtro">
+                <button id="limpar-btn">LIMPAR FILTROS</button>
+                <button id="filtrar-btn">FILTRAR</button>
+
+                <select name="maquina" size="1">
+                    <option value="all" selected>máquina</option>
+                    <option value="maquina1">Máquina 1</option>
+                    <option value="maquina2">Máquina 2</option>
+                    <option value="maquina3">Máquina 3</option>
+                </select>
+
+                <select name="parada" size="1">
+                    <option value="all" selected>parada</option>
+                    <option value="corte">Corte</option>
+                    <option value="quebra">Quebra</option>
+                    <option value="emergencia">Emergência</option>
+                </select>
+                
+                <select class="ano" name="ano">
+                    <option value="all" selected>ano</option>
+                    <option value="22">2022</option>
+                    <option value="21">2021</option>
+                </select>
+
+                <select class="mes" name="mes" size="1">
+                    <option value="all" selected>mes</option>
+                    <option value="01">Janeiro</option>
+                    <option value="02">Fevereiro</option>
+                    <option value="03">Março</option>
+                    <option value="04">Abril</option>
+                    <option value="05">Maio</option>
+                    <option value="06">Junho</option>
+                    <option value="07">Julho</option>
+                    <option value="08">Agosto</option>
+                    <option value="09">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                </select>
+
+                <select class="dia" name="dia">
+                    <option value="all" selected>dia</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+
+
+            </div>
+            
+            <div id="conteudo">
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>
